@@ -5,9 +5,9 @@ def filter_by_state(data: Optional, state_key: str = "EXECUTED") -> Iterable:
     """принимает список словарей возвращает новый список словарей, содержащий только те словари,
     у которых ключ state_key соответствует указанному значению"""
     result = []
-    for i in range(len(data)):
-        if data[i]["state"] == state_key:
-            result.append(data[i])
+    for item in range(len(data)):
+        if data[item]["state"] == state_key:
+            result.append(data[item])
     return result
 
 
