@@ -1,4 +1,4 @@
-from mask import get_mask_account, get_mask_card_number
+from src.mask import get_mask_account, get_mask_card_number
 
 
 def mask_account_card(card_info: str) -> str:  # Visa Platinum 7000 79** **** 6361
@@ -7,7 +7,7 @@ def mask_account_card(card_info: str) -> str:  # Visa Platinum 7000 79** **** 63
     account_name = ""
     account_number = ""
     for i in card_info_list:
-        if i.isdigit() == False:
+        if not i.isdigit() :
             account_name += i
             account_name += " "
         else:
